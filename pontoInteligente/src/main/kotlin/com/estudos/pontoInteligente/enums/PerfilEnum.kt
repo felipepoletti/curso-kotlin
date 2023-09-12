@@ -1,4 +1,4 @@
-package enums
+package com.estudos.pontoInteligente.enums
 
 enum class PerfilEnum {
     ROLE_ADMIN,

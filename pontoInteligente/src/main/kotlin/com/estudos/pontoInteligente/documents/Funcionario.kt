@@ -1,6 +1,6 @@
-package documents
+package com.estudos.pontoInteligente.documents
 
-import enums.PerfilEnum
+import com.estudos.pontoInteligente.enums.PerfilEnum
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 

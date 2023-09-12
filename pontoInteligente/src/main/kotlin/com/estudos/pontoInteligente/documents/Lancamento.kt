@@ -1,6 +1,6 @@
 package documents
 
-import enums.TipoEnum
+import com.estudos.pontoInteligente.enums.TipoEnum
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.util.Date
