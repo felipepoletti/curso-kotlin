@@ -1,0 +1,4 @@
+package documents
+
+class Funcionario {
+}
