@@ -1,4 +1,4 @@
-package documents
+package com.estudos.pontoInteligente.documents
 
 import com.estudos.pontoInteligente.enums.TipoEnum
 import org.springframework.data.annotation.Id
