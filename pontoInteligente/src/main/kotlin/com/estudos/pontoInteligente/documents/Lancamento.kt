@@ -12,5 +12,5 @@ data class Lancamento (
         val funcionarioId: String,
         val descricao: String? = "",
         val localizacao: String? = "",
-        @Id val id: String? = null,
+        @Id val id: String? = null
 )

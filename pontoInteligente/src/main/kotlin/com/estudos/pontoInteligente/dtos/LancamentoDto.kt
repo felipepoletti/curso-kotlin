@@ -5,6 +5,6 @@ class LancamentoDto (
         val tipo: String? = null,
         val descricao: String? = null,
         val localizacao: String? = null,
-        val funcionarioId: String? = null,
+        val funcionarioId: String,
         var id: String? = null
 )

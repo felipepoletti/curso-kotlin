@@ -1,3 +1,7 @@
 Aula 01: Kotlin é bem menos verboso que o Java. 
 Podemos definir os atributos dos objetos dentro dos construtores. Usando val, dizemos que o atributo é uma constante e não deve ser alterado, é possível usar var também.
 Toda tabela do mongoDb deve possuir um id, sinalizado como @Id. Para dizer que um atributo é nullable no kotlin, é preciso sinalizar colocando um ? = null depois do tipo. Exemplo: @Id val id: String? = null.
+
+Controller: @RequestBody faz a conversão de um JSON, pra uma classe Java DTO.
+
+ResponseEntity ajuda a retornar o codigo correto da requisicao HTTP
