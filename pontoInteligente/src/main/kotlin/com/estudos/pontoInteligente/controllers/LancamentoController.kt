@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.BindingResult
 import org.springframework.validation.ObjectError
+import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -27,13 +28,13 @@ class LancamentoController(val lancamentoService: LancamentoService,
     val qtdPorPagina: Int = 15
 
     @PostMapping
-    fun adicionar(@RequestBody lancamentoDto: LancamentoDto,
+    fun adicionar(@Validated @RequestBody lancamentoDto: LancamentoDto,
                   result: BindingResult): ResponseEntity<Response<LancamentoDto>> {
         val response: Response<LancamentoDto> = Response<LancamentoDto>()
         validarFuncionario(lancamentoDto, result)
 
         if (result.hasErrors()) {
-            for (err in result.allErrors) response.erros.add(err.defaultMessage.toString())
+            result.allErrors.forEach { erro -> erro.defaultMessage?.let { response.erros.add(it) } }
             return ResponseEntity.badRequest().body(response)
         }
 
